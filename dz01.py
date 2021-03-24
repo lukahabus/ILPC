@@ -51,17 +51,17 @@ def when_is_it_easter_mister():
     print("Unesi godinu: ")
     year = int(input())
     a = year % 19
-    b = int(year / 100)
+    b = year // 100
     c = year % 100
-    d = int(b / 4)
+    d = b // 4
     e = b % 4
-    g = int((8 * b + 13) / 25)
+    g = (8 * b + 13) // 25
     h = (19 * a + b - d - g + 15) % 30
-    i = int(c / 4)
+    i = c // 4
     k = c % 4
     j = (32 + 2 * e + 2 * i - h - k) % 7
-    m = int((a + 11 * h + 19 * j) / 433)
-    month = int((h + j - 7 * m + 90) / 25)
+    m = (a + 11 * h + 19 * j) // 433
+    month = (h + j - 7 * m + 90) // 25
     day = (h + j - 7 * m + 33 * month + 19) % 32
     return f'Uskrs je {day}.{month}.\n'
 
